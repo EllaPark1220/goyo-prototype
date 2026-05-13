@@ -49,11 +49,9 @@ export default function CompletionModal({ isOpen, onClose, volumeLabel, lessonTi
         </div>
 
         <div className="flex flex-col gap-3">
-          <Button asChild className="w-full bg-accent-main hover:bg-accent-deep text-white font-medium py-6 rounded-xl">
-            <Link href="/stamp-map">
-              스탬프 맵 보기
-            </Link>
-          </Button>
+          <Link href="/stamp-map" className="flex items-center justify-center w-full bg-accent-main hover:bg-accent-deep text-white font-medium py-6 rounded-xl transition-colors">
+            스탬프 맵 보기
+          </Link>
           <Button variant="outline" onClick={onClose} className="w-full border-line-light text-text-soft hover:bg-bg-light hover:text-text-main py-6 rounded-xl font-medium">
             닫기
           </Button>
