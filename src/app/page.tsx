@@ -96,93 +96,186 @@ export default function Home() {
         </div>
       </section>
 
-      {/* STAGE 2 */}
+      {/* STAGE 2 - Feature Showcase (B Type / Show Don't Tell) */}
       <section className="relative px-6 py-20 md:px-10 md:py-32 text-text-main" style={{
         background: 'linear-gradient(180deg, var(--water-light) 0%, var(--bg-light) 30%, var(--water-card) 100%)'
       }}>
-        <div className="max-w-[1100px] mx-auto">
-          <div ref={addToRefs} className="opacity-0 translate-y-8 transition-all duration-1000 ease-out">
-            <div className="font-mono text-[11px] tracking-[0.3em] text-accent-deep uppercase font-semibold mb-5 text-center">WHAT WE OFFER</div>
-            <h2 className="font-serif font-semibold text-[28px] md:text-[min(4.2vw,44px)] leading-tight tracking-tight mb-4 text-center">차분히 배울 수 있는<br/>여섯 가지 도구</h2>
-            <p className="font-sans text-[15px] md:text-[min(1.4vw,16.5px)] text-text-soft leading-relaxed max-w-[580px] mx-auto text-center mb-16">
-              강요하지 않고, 흐름을 끊지 않으며,<br/>당신이 멈추고 싶을 때 멈출 수 있도록.
+        <div className="max-w-[1200px] mx-auto">
+          <div ref={addToRefs} className="opacity-0 translate-y-8 transition-all duration-1000 ease-out mb-16">
+            <div className="font-mono text-[11px] tracking-[0.3em] text-accent-deep uppercase font-semibold mb-5 text-center">INTERFACE</div>
+            <h2 className="font-serif font-semibold text-[28px] md:text-[min(4.2vw,44px)] leading-tight tracking-tight mb-4 text-center">방해 없는 화면에서<br/>학습에만 몰입하세요</h2>
+            <p className="font-sans text-[15px] md:text-[min(1.4vw,16.5px)] text-text-soft leading-relaxed max-w-[580px] mx-auto text-center">
+              알림도, 배너도, 재촉하는 타이머도 없습니다.<br/>오직 당신과 지식만 남는 투명한 인터페이스를 경험하세요.
             </p>
           </div>
 
-          <div ref={addToRefs} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 opacity-0 translate-y-8 transition-all duration-1000 ease-out delay-100">
-            {/* Cards */}
-            <div className="bg-white border border-line-light rounded-[18px] p-7 md:p-9 transition-all duration-400 hover:-translate-y-1 hover:border-accent-soft hover:shadow-[0_24px_48px_-24px_rgba(26,142,156,0.25)]">
-              <svg className="w-11 h-11 mb-5 text-accent-main" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6">
-                <rect x="6" y="10" width="36" height="24" rx="3"/>
-                <path d="M20 18 L28 22 L20 26 Z" fill="currentColor"/>
-                <line x1="14" y1="40" x2="34" y2="40"/>
-              </svg>
-              <h3 className="font-serif font-semibold text-[19px] text-text-main tracking-tight mb-3">133편의 영상 강의</h3>
-              <p className="font-sans text-sm text-text-soft leading-relaxed">5권에 걸쳐 차근차근 풀어가는 영상. 빠른 진도가 아니라 깊은 이해를 위한 속도로.</p>
+          <div ref={addToRefs} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 opacity-0 translate-y-8 transition-all duration-1000 ease-out delay-100">
+            {/* Bento Box 1: Video & Text Toggle (Span 2) */}
+            <div className="lg:col-span-2 bg-white border border-line-light rounded-[24px] p-8 md:p-10 transition-all duration-500 hover:-translate-y-1 hover:border-accent-soft hover:shadow-[0_30px_60px_-15px_rgba(26,142,156,0.15)] overflow-hidden relative group min-h-[360px] flex flex-col justify-center">
+              <div className="relative z-10 w-full md:w-1/2 md:pr-6">
+                <div className="inline-block px-3 py-1 rounded-full bg-accent-light/30 text-accent-deep text-[11px] uppercase tracking-wider font-bold mb-4">Core Feature</div>
+                <h3 className="font-serif font-semibold text-[24px] text-text-main tracking-tight mb-3">영상과 글, 원클릭 전환</h3>
+                <p className="font-sans text-[15px] text-text-soft leading-relaxed mb-6">
+                  영상이 부담스러운 날엔 글로, 글이 눈에 안 들어오는 날엔 영상으로. 당신의 컨디션에 맞춰 언제든 학습 방식을 전환합니다.
+                </p>
+              </div>
+              
+              {/* UI Mockup Positioned Absolutely to the right */}
+              <div className="mt-8 md:mt-0 md:absolute md:-right-8 md:top-1/2 md:-translate-y-1/2 w-full md:w-[55%] lg:w-[50%] bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl shadow-lg p-5 transform transition-transform duration-500 group-hover:scale-[1.03] group-hover:-translate-x-3">
+                {/* Browser header */}
+                <div className="flex gap-1.5 mb-4">
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#E2E8F0]"></div>
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#E2E8F0]"></div>
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#E2E8F0]"></div>
+                </div>
+                {/* Toggle UI */}
+                <div className="flex justify-end mb-3">
+                  <div className="bg-white rounded-full p-1 shadow-sm flex gap-1 border border-gray-100">
+                    <div className="px-4 py-1.5 bg-accent-soft rounded-full text-[11px] text-white font-bold transition-all">영상</div>
+                    <div className="px-4 py-1.5 text-gray-400 text-[11px] font-bold transition-all hover:text-gray-600">글</div>
+                  </div>
+                </div>
+                {/* Video Skeleton */}
+                <div className="w-full h-36 bg-[#E2E8F0] rounded-lg mb-4 flex items-center justify-center relative overflow-hidden group/video">
+                  <div className="absolute inset-0 bg-gradient-to-tr from-accent-soft/20 to-transparent"></div>
+                  <svg className="w-10 h-10 text-white drop-shadow-md transform transition-transform group-hover/video:scale-110" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+                {/* Text Skeleton */}
+                <div className="space-y-2.5">
+                  <div className="h-2 bg-[#CBD5E1] rounded w-3/4"></div>
+                  <div className="h-2 bg-[#E2E8F0] rounded w-full"></div>
+                </div>
+              </div>
             </div>
 
-            <div className="bg-white border border-line-light rounded-[18px] p-7 md:p-9 transition-all duration-400 hover:-translate-y-1 hover:border-accent-soft hover:shadow-[0_24px_48px_-24px_rgba(26,142,156,0.25)]">
-              <svg className="w-11 h-11 mb-5 text-accent-main" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6">
-                <path d="M8 10 H24 V38 H10 Q8 38 8 36 Z"/>
-                <path d="M40 10 H24 V38 H38 Q40 38 40 36 Z"/>
-                <line x1="13" y1="18" x2="20" y2="18"/>
-                <line x1="13" y1="24" x2="20" y2="24"/>
-                <line x1="13" y1="30" x2="20" y2="30"/>
-                <line x1="28" y1="18" x2="35" y2="18"/>
-                <line x1="28" y1="24" x2="35" y2="24"/>
-                <line x1="28" y1="30" x2="35" y2="30"/>
-              </svg>
-              <h3 className="font-serif font-semibold text-[19px] text-text-main tracking-tight mb-3">글로 읽는 학습</h3>
-              <p className="font-sans text-sm text-text-soft leading-relaxed">영상이 부담스러운 날엔 글로 읽으세요. 같은 내용을 한 번의 클릭으로 전환합니다.</p>
+            {/* Bento Box 2: Dictionary (Span 1) */}
+            <div className="bg-white border border-line-light rounded-[24px] p-8 md:p-10 transition-all duration-500 hover:-translate-y-1 hover:border-accent-soft hover:shadow-[0_30px_60px_-15px_rgba(26,142,156,0.15)] overflow-hidden relative group flex flex-col min-h-[360px]">
+              <div className="inline-block px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-[11px] uppercase tracking-wider font-bold mb-4 w-max">Quick Tool</div>
+              <h3 className="font-serif font-semibold text-[24px] text-text-main tracking-tight mb-3">즉시 찾는 용어 사전</h3>
+              <p className="font-sans text-[15px] text-text-soft leading-relaxed mb-8">흐름을 끊지 마세요. 모르는 단어는 그 자리에서 바로 확인하고 넘어갈 수 있습니다.</p>
+              
+              {/* UI Mockup */}
+              <div className="mt-auto bg-white border border-gray-100 rounded-xl shadow-[0_8px_30px_rgba(0,0,0,0.06)] p-5 transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_15px_35px_rgba(26,142,156,0.12)]">
+                <div className="flex items-center gap-2 border-b border-gray-100 pb-3 mb-3">
+                  <svg className="w-4 h-4 text-accent-main" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                  <div className="text-[15px] font-bold text-text-main">매몰비용</div>
+                </div>
+                <div className="text-[13px] text-text-soft leading-relaxed">
+                  이미 지출해서 회수할 수 없는 비용. 합리적인 의사결정에서는 매몰비용을 고려하지 않아야 합니다.
+                </div>
+              </div>
             </div>
 
-            <div className="bg-white border border-line-light rounded-[18px] p-7 md:p-9 transition-all duration-400 hover:-translate-y-1 hover:border-accent-soft hover:shadow-[0_24px_48px_-24px_rgba(26,142,156,0.25)]">
-              <svg className="w-11 h-11 mb-5 text-accent-main" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6">
-                <circle cx="16" cy="24" r="7"/>
-                <path d="M28 17 L40 31" strokeLinecap="round"/>
-                <path d="M40 17 L28 31" strokeLinecap="round"/>
-              </svg>
-              <h3 className="font-serif font-semibold text-[19px] text-text-main tracking-tight mb-3">OX 퀴즈로 이해 확인</h3>
-              <p className="font-sans text-sm text-text-soft leading-relaxed">각 편 끝 5문항의 O/X. 점수도 등수도 없이, 이해했는지만 조용히 확인합니다.</p>
+            {/* Bento Box 3: OX Quiz (Span 1) */}
+            <div className="bg-white border border-line-light rounded-[24px] p-8 md:p-10 transition-all duration-500 hover:-translate-y-1 hover:border-accent-soft hover:shadow-[0_30px_60px_-15px_rgba(26,142,156,0.15)] overflow-hidden relative group flex flex-col min-h-[360px]">
+              <div className="inline-block px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-[11px] uppercase tracking-wider font-bold mb-4 w-max">Check-up</div>
+              <h3 className="font-serif font-semibold text-[24px] text-text-main tracking-tight mb-3">점수 없는 OX 퀴즈</h3>
+              <p className="font-sans text-[15px] text-text-soft leading-relaxed mb-8">각 편이 끝날 때마다 5문항의 퀴즈가 제공됩니다. 오직 나만의 이해도를 조용히 점검합니다.</p>
+              
+              {/* UI Mockup */}
+              <div className="mt-auto flex justify-center gap-4 transform transition-transform duration-500 group-hover:scale-105">
+                <div className="w-20 h-20 rounded-2xl bg-[#F8FAFC] border-2 border-transparent shadow-sm flex items-center justify-center text-4xl font-bold text-gray-300 hover:border-accent-main hover:text-accent-main hover:bg-white transition-all cursor-pointer">O</div>
+                <div className="w-20 h-20 rounded-2xl bg-white border-2 border-accent-main shadow-md flex items-center justify-center text-4xl font-bold text-accent-main transition-all cursor-pointer relative">
+                  X
+                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-accent-main rounded-full border-2 border-white flex items-center justify-center">
+                    <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className="bg-white border border-line-light rounded-[18px] p-7 md:p-9 transition-all duration-400 hover:-translate-y-1 hover:border-accent-soft hover:shadow-[0_24px_48px_-24px_rgba(26,142,156,0.25)]">
-              <svg className="w-11 h-11 mb-5 text-accent-main" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6">
-                <circle cx="22" cy="22" r="12"/>
-                <line x1="31" y1="31" x2="40" y2="40" strokeLinecap="round"/>
-                <line x1="22" y1="17" x2="22" y2="22"/>
-                <circle cx="22" cy="26" r="1" fill="currentColor"/>
-              </svg>
-              <h3 className="font-serif font-semibold text-[19px] text-text-main tracking-tight mb-3">핵심 용어 사전</h3>
-              <p className="font-sans text-sm text-text-soft leading-relaxed">모르는 단어가 나오면 즉시 찾습니다. 그 용어가 처음 등장한 영상으로도 바로 이동.</p>
+            {/* Bento Box 4: Stamp Map (Span 2) */}
+            <div className="lg:col-span-2 bg-[#0A3A42] rounded-[24px] p-8 md:p-10 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(10,58,66,0.4)] overflow-hidden relative group min-h-[360px] flex flex-col justify-center">
+              <div className="relative z-10 w-full md:w-1/2">
+                <div className="inline-block px-3 py-1 rounded-full bg-white/10 text-white text-[11px] uppercase tracking-wider font-bold mb-4 backdrop-blur-sm border border-white/20">Motivation</div>
+                <h3 className="font-serif font-semibold text-[24px] text-white tracking-tight mb-3">고요하게 채워가는 진주 스탬프</h3>
+                <p className="font-sans text-[15px] text-white/80 leading-relaxed mb-6">
+                  현란한 폭죽 애니메이션이나 등수 표시는 없습니다. 강의를 하나 마칠 때마다 나만의 심해 지도에 조용히 진주 하나가 켜집니다.
+                </p>
+                <Link href="/stamp-map" className="inline-flex items-center text-sm font-semibold text-white/90 hover:text-white transition-colors cursor-pointer">
+                  스탬프 맵 살펴보기 <svg className="w-4 h-4 ml-1 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                </Link>
+              </div>
+              
+              {/* UI Mockup Map */}
+              <div className="mt-10 md:mt-0 md:absolute md:-right-4 md:top-1/2 md:-translate-y-1/2 w-full md:w-[60%] h-48 md:h-full opacity-70 group-hover:opacity-100 transition-opacity duration-700 flex items-center justify-center">
+                 <div className="relative w-full max-w-sm h-full flex items-center justify-center pointer-events-none">
+                   <svg className="w-full h-full drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]" viewBox="0 0 200 100">
+                     {/* Paths */}
+                     <path d="M20,50 Q40,30 60,40 T100,50 T140,60 T180,40" fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="2" strokeDasharray="4 4"/>
+                     <path d="M20,50 Q40,30 60,40" fill="none" stroke="rgba(255,255,255,0.6)" strokeWidth="2.5"/>
+                     <path d="M60,40 Q80,50 100,50" fill="none" stroke="rgba(255,255,255,0.6)" strokeWidth="2.5"/>
+                     
+                     {/* Pearls */}
+                     <circle cx="20" cy="50" r="7" fill="#FFF" className="animate-[pulse_3s_ease-in-out_infinite] drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]"/>
+                     <circle cx="60" cy="40" r="7" fill="#FFF" className="animate-[pulse_3s_ease-in-out_infinite]" style={{ animationDelay: '0.5s' }}/>
+                     <circle cx="100" cy="50" r="7" fill="#FFF" className="animate-[pulse_3s_ease-in-out_infinite]" style={{ animationDelay: '1s' }}/>
+                     
+                     {/* Next step indicator */}
+                     <circle cx="100" cy="50" r="14" fill="transparent" stroke="rgba(255,255,255,0.4)" strokeWidth="1" className="animate-[ping_2.5s_cubic-bezier(0,0,0.2,1)_infinite]"/>
+                     
+                     {/* Upcoming Pearls */}
+                     <circle cx="140" cy="60" r="5" fill="rgba(255,255,255,0.2)" />
+                     <circle cx="180" cy="40" r="5" fill="rgba(255,255,255,0.2)" />
+                   </svg>
+                 </div>
+              </div>
             </div>
 
-            <div className="bg-white border border-line-light rounded-[18px] p-7 md:p-9 transition-all duration-400 hover:-translate-y-1 hover:border-accent-soft hover:shadow-[0_24px_48px_-24px_rgba(26,142,156,0.25)]">
-              <svg className="w-11 h-11 mb-5 text-accent-main" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6">
-                <circle cx="14" cy="14" r="4" fill="currentColor" fillOpacity="0.3"/>
-                <circle cx="26" cy="20" r="4" fill="currentColor" fillOpacity="0.3"/>
-                <circle cx="38" cy="14" r="4" fill="currentColor" fillOpacity="0.3"/>
-                <circle cx="20" cy="32" r="4"/>
-                <circle cx="34" cy="34" r="4"/>
-                <path d="M14 14 Q20 18 26 20 T 38 14" strokeDasharray="2 2"/>
-                <path d="M26 20 Q23 26 20 32" strokeDasharray="2 2"/>
-                <path d="M26 20 Q30 27 34 34" strokeDasharray="2 2"/>
-              </svg>
-              <h3 className="font-serif font-semibold text-[19px] text-text-main tracking-tight mb-3">진주 스탬프 맵</h3>
-              <p className="font-sans text-sm text-text-soft leading-relaxed">학습한 편마다 작은 진주가 켜집니다. 점수도, 순위도, 자극도 없이.</p>
+            {/* Bento Box 5: Kakao Share (Span 1) */}
+            <div className="bg-white border border-line-light rounded-[24px] p-8 md:p-10 transition-all duration-500 hover:-translate-y-1 hover:border-accent-soft hover:shadow-[0_30px_60px_-15px_rgba(26,142,156,0.15)] overflow-hidden relative group flex flex-col min-h-[360px]">
+              <div className="inline-block px-3 py-1 rounded-full bg-[#FAE100]/20 text-[#3A2929] text-[11px] uppercase tracking-wider font-bold mb-4 w-max">Social</div>
+              <h3 className="font-serif font-semibold text-[24px] text-text-main tracking-tight mb-3">가볍게 공유하기</h3>
+              <p className="font-sans text-[15px] text-text-soft leading-relaxed mb-8">혼자 알기 아까운 인사이트를 발견했나요? 카카오톡으로 쉽게 배움을 나누세요.</p>
+              
+              {/* UI Mockup */}
+              <div className="mt-auto bg-[#FAE100] rounded-xl shadow-[0_8px_30px_rgba(250,225,0,0.2)] p-4 transform transition-transform duration-500 group-hover:-translate-y-2 flex items-center justify-center cursor-pointer">
+                <svg className="w-7 h-7 text-[#3A2929]" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 3c-5.52 0-10 3.58-10 8 0 2.86 1.83 5.37 4.6 6.84-.23.82-.82 2.9-.88 3.12-.08.28.1.28.26.17.13-.1.88-.6 2.45-1.68 1.13.31 2.33.48 3.57.48 5.52 0 10-3.58 10-8s-4.48-8-10-8z"/>
+                </svg>
+                <span className="ml-3 font-bold text-[#3A2929] text-sm">카카오톡 공유하기</span>
+              </div>
             </div>
 
-            <div className="bg-white border border-line-light rounded-[18px] p-7 md:p-9 transition-all duration-400 hover:-translate-y-1 hover:border-accent-soft hover:shadow-[0_24px_48px_-24px_rgba(26,142,156,0.25)]">
-              <svg className="w-11 h-11 mb-5 text-accent-main" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.6">
-                <path d="M10 6 H30 L38 14 V42 H10 Z"/>
-                <path d="M30 6 V14 H38"/>
-                <line x1="16" y1="22" x2="32" y2="22"/>
-                <line x1="16" y1="28" x2="32" y2="28"/>
-                <line x1="16" y1="34" x2="26" y2="34"/>
-              </svg>
-              <h3 className="font-serif font-semibold text-[19px] text-text-main tracking-tight mb-3">교사용 PDF 자료</h3>
-              <p className="font-sans text-sm text-text-soft leading-relaxed">강의에서 다룬 내용을 인쇄해 가르치고 싶은 분들을 위한 PDF. 누구나 다운로드.</p>
+            {/* Bento Box 6: Teacher PDF (Span 2) */}
+            <div className="lg:col-span-2 bg-[#F8FAFC] border border-[#E2E8F0] rounded-[24px] p-8 md:p-10 transition-all duration-500 hover:-translate-y-1 hover:border-accent-soft hover:shadow-[0_30px_60px_-15px_rgba(26,142,156,0.15)] overflow-hidden relative group min-h-[360px] flex flex-col justify-center">
+              <div className="relative z-10 w-full md:w-1/2 md:pr-6">
+                <div className="inline-block px-3 py-1 rounded-full bg-accent-deep/10 text-accent-deep text-[11px] uppercase tracking-wider font-bold mb-4">For Educators</div>
+                <h3 className="font-serif font-semibold text-[24px] text-text-main tracking-tight mb-3">교사용 PDF 교안 제공</h3>
+                <p className="font-sans text-[15px] text-text-soft leading-relaxed mb-6">
+                  학교 수업이나 독서 모임에서 함께 경제를 공부하시나요? 모든 에피소드의 핵심을 담은 깔끔한 교안을 누구나 다운로드할 수 있습니다.
+                </p>
+                <Link href="/teacher-kit" className="inline-flex items-center text-sm font-semibold text-accent-main hover:text-accent-deep transition-colors cursor-pointer">
+                  교안 자료실 가기 <svg className="w-4 h-4 ml-1 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                </Link>
+              </div>
+              
+              {/* UI Mockup Positioned Absolutely to the right */}
+              <div className="mt-8 md:mt-0 md:absolute md:-right-8 md:top-1/2 md:-translate-y-1/2 w-full md:w-[55%] lg:w-[45%] transform transition-transform duration-500 group-hover:scale-[1.03] group-hover:-translate-x-3 flex gap-4">
+                <div className="w-full bg-white border border-gray-200 rounded-xl shadow-xl p-5 aspect-[1/1.4] relative">
+                   <div className="w-10 h-12 bg-red-100 rounded flex items-center justify-center mb-4">
+                     <span className="text-red-500 font-bold text-[10px]">PDF</span>
+                   </div>
+                   <div className="space-y-2">
+                     <div className="h-2.5 bg-gray-200 rounded w-full"></div>
+                     <div className="h-2.5 bg-gray-200 rounded w-5/6"></div>
+                   </div>
+                   <div className="mt-5 space-y-1.5">
+                     <div className="h-1.5 bg-gray-100 rounded w-full"></div>
+                     <div className="h-1.5 bg-gray-100 rounded w-full"></div>
+                     <div className="h-1.5 bg-gray-100 rounded w-3/4"></div>
+                   </div>
+                   <div className="absolute bottom-4 right-4 w-8 h-8 bg-gray-50 rounded-full flex items-center justify-center border border-gray-200 shadow-sm text-gray-400">
+                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                   </div>
+                </div>
+                <div className="hidden sm:block w-full bg-white border border-gray-200 rounded-xl shadow-md p-5 aspect-[1/1.4] relative opacity-50 transform translate-y-4">
+                   <div className="w-10 h-12 bg-gray-100 rounded mb-4"></div>
+                   <div className="space-y-2"><div className="h-2.5 bg-gray-200 rounded w-full"></div></div>
+                </div>
+              </div>
             </div>
+            
           </div>
         </div>
       </section>
@@ -213,7 +306,6 @@ export default function Home() {
               <div className="relative flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-0 group">
                 <div className="sm:w-1/2 sm:pr-12 flex sm:justify-end w-full">
                   <div className="bg-white/10 border border-white/20 rounded-2xl p-6 sm:p-7 backdrop-blur-md transition-all duration-300 group-hover:bg-white/20 group-hover:border-white/40 group-hover:-translate-y-1 w-full text-left relative overflow-hidden">
-                    <div className="absolute -right-4 -top-4 text-[80px] font-serif font-bold text-white/5 pointer-events-none select-none">1</div>
                     <div className="font-mono text-[12px] text-accent-light tracking-wider mb-2">기초 어휘 학습</div>
                     <div className="font-serif font-semibold text-[22px] text-white tracking-tight mb-3">1권. 돈의 언어</div>
                     <div className="font-sans text-[14.5px] text-white/80 leading-relaxed">
@@ -236,7 +328,6 @@ export default function Home() {
               <div className="relative flex flex-col sm:flex-row-reverse items-center sm:items-start gap-6 sm:gap-0 group">
                 <div className="sm:w-1/2 sm:pl-12 flex sm:justify-start w-full">
                   <div className="bg-white/10 border border-white/20 rounded-2xl p-6 sm:p-7 backdrop-blur-md transition-all duration-300 group-hover:bg-white/20 group-hover:border-white/40 group-hover:-translate-y-1 w-full text-left relative overflow-hidden">
-                    <div className="absolute -left-4 -top-4 text-[80px] font-serif font-bold text-white/5 pointer-events-none select-none">2</div>
                     <div className="font-mono text-[12px] text-accent-light tracking-wider mb-2">거시 경제 이해</div>
                     <div className="font-serif font-semibold text-[22px] text-white tracking-tight mb-3">2권. 돈의 흐름</div>
                     <div className="font-sans text-[14.5px] text-white/80 leading-relaxed">
@@ -258,7 +349,6 @@ export default function Home() {
               <div className="relative flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-0 group">
                 <div className="sm:w-1/2 sm:pr-12 flex sm:justify-end w-full">
                   <div className="bg-white/10 border border-white/20 rounded-2xl p-6 sm:p-7 backdrop-blur-md transition-all duration-300 group-hover:bg-white/20 group-hover:border-white/40 group-hover:-translate-y-1 w-full text-left relative overflow-hidden">
-                    <div className="absolute -right-4 -top-4 text-[80px] font-serif font-bold text-white/5 pointer-events-none select-none">3</div>
                     <div className="font-mono text-[12px] text-accent-light tracking-wider mb-2">기업 가치 분석</div>
                     <div className="font-serif font-semibold text-[22px] text-white tracking-tight mb-3">3권. 돈의 구조</div>
                     <div className="font-sans text-[14.5px] text-white/80 leading-relaxed">
@@ -280,7 +370,6 @@ export default function Home() {
               <div className="relative flex flex-col sm:flex-row-reverse items-center sm:items-start gap-6 sm:gap-0 group">
                 <div className="sm:w-1/2 sm:pl-12 flex sm:justify-start w-full">
                   <div className="bg-white/10 border border-white/20 rounded-2xl p-6 sm:p-7 backdrop-blur-md transition-all duration-300 group-hover:bg-white/20 group-hover:border-white/40 group-hover:-translate-y-1 w-full text-left relative overflow-hidden">
-                    <div className="absolute -left-4 -top-4 text-[80px] font-serif font-bold text-white/5 pointer-events-none select-none">4</div>
                     <div className="font-mono text-[12px] text-accent-light tracking-wider mb-2">실전 경제 의사결정</div>
                     <div className="font-serif font-semibold text-[22px] text-white tracking-tight mb-3">4권. 돈의 결정</div>
                     <div className="font-sans text-[14.5px] text-white/80 leading-relaxed">
@@ -302,7 +391,6 @@ export default function Home() {
               <div className="relative flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-0 group">
                 <div className="sm:w-1/2 sm:pr-12 flex sm:justify-end w-full">
                   <div className="bg-accent-main/20 border border-accent-light/50 rounded-2xl p-6 sm:p-7 backdrop-blur-md transition-all duration-300 group-hover:bg-accent-main/30 group-hover:border-accent-light group-hover:-translate-y-1 w-full text-left relative overflow-hidden shadow-[0_0_30px_rgba(26,142,156,0.15)]">
-                    <div className="absolute -right-4 -top-4 text-[80px] font-serif font-bold text-accent-light/10 pointer-events-none select-none">5</div>
                     <div className="font-mono text-[12px] text-white tracking-wider mb-2 font-semibold">최종 완성</div>
                     <div className="font-serif font-semibold text-[22px] text-white tracking-tight mb-3">5권. 돈의 인생</div>
                     <div className="font-sans text-[14.5px] text-white/90 leading-relaxed">
