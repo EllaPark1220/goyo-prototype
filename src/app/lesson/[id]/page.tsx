@@ -113,20 +113,17 @@ export default function LessonPage({ params }: { params: Promise<{ id: string }>
         {/* Media Area */}
         <div className="mb-[60px] relative">
           {viewMode === 'video' && (
-            <div className="relative aspect-video bg-water-card rounded-2xl overflow-hidden border border-line-light flex flex-col items-center justify-center gap-3.5 text-accent-deep" style={{ background: 'linear-gradient(135deg, var(--water-card) 0%, var(--water-light) 100%)' }}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-16 h-16 text-accent-main opacity-85">
-                <circle cx="12" cy="12" r="10" />
-                <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" />
-              </svg>
-              <div className="font-mono text-[11px] tracking-[0.2em] uppercase">Video Player</div>
-              
-              {showToast && (
-                <div className="absolute top-5 left-1/2 -translate-x-1/2 bg-white/95 text-accent-deep p-[12px_22px] rounded-[10px] font-sans text-[13.5px] font-medium border border-line-light shadow-[0_6px_18px_-6px_rgba(13,95,109,0.25)] backdrop-blur-sm z-10 whitespace-nowrap animate-[toastFade_3.4s_ease_forwards]">
-                  마지막으로 본 2:14부터 이어집니다
-                </div>
-              )}
-            </div>
-          )}
+  <div className="relative aspect-video bg-water-card rounded-2xl overflow-hidden border border-line-light">
+    <iframe
+      className="absolute top-0 left-0 w-full h-full"
+      src="https://www.youtube.com/embed/oLPoeKtsvXc?cc_load_policy=1&modestbranding=1&rel=0"
+      title="다 가질 수 없다는 것 — 희소성과 선택"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      loading="lazy"
+    />
+  </div>
+)}
 
           {viewMode === 'text' && (
             <div className="font-sans text-[17px] leading-[1.95] text-text-main">
