@@ -103,6 +103,9 @@
   --color-text-mute: var(--text-mute);
   --color-line-light: var(--line-light);
   --color-line-soft: var(--line-soft);
+  --color-status-public: var(--status-public);
+  --color-status-private: var(--status-private);
+  --color-status-draft: var(--status-draft);
   --color-kakao: var(--kakao-yellow);
   --font-sans: var(--font-sans);
   --font-serif: var(--hahmlet);
