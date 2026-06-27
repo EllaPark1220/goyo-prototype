@@ -113,16 +113,29 @@ export default function LessonPage({ params }: { params: Promise<{ id: string }>
         {/* Media Area */}
         <div className="mb-[60px] relative">
           {viewMode === 'video' && (
-  <div className="relative aspect-video bg-water-card rounded-2xl overflow-hidden border border-line-light">
-    <iframe
-      className="absolute top-0 left-0 w-full h-full"
-      src="https://www.youtube.com/embed/oLPoeKtsvXc?cc_load_policy=1&modestbranding=1&rel=0"
-      title="다 가질 수 없다는 것 — 희소성과 선택"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-      loading="lazy"
-    />
-  </div>
+  <>
+    <div className="relative aspect-video bg-water-card rounded-2xl overflow-hidden border border-line-light">
+      <iframe
+        className="absolute top-0 left-0 w-full h-full"
+        src="https://www.youtube-nocookie.com/embed/oLPoeKtsvXc?cc_load_policy=1&modestbranding=1&rel=0"
+        title="다 가질 수 없다는 것 — 희소성과 선택"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        frameBorder={0}
+      />
+    </div>
+    <p className="mt-3 font-sans text-[13px] text-text-mute">
+      영상이 보이지 않나요?{' '}
+      <a
+        href="https://youtu.be/oLPoeKtsvXc"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-accent-deep font-medium underline underline-offset-2 hover:text-accent-main"
+      >
+        YouTube에서 바로 보기 →
+      </a>
+    </p>
+  </>
 )}
 
           {viewMode === 'text' && (
